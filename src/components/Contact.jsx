@@ -29,6 +29,7 @@ function Contact() {
       toast.error("Something went wrong");
     }
   };
+
   return (
     <section
       name="Contact"
@@ -37,28 +38,29 @@ function Contact() {
       <div className="pointer-events-none absolute -left-8 -top-10 h-44 w-44 rounded-full bg-gradient-to-r from-sky-300 via-cyan-300 to-indigo-400 opacity-30 blur-3xl" />
       <div className="pointer-events-none absolute -right-6 -bottom-6 h-40 w-40 rounded-full bg-gradient-to-r from-fuchsia-300 via-pink-300 to-rose-300 opacity-30 blur-3xl" />
 
-      <div className="relative z-10 bg-white/90 backdrop-blur-xl border border-slate-200 rounded-3xl shadow-2xl p-8 md:p-12">
+      <div className="relative z-10 rounded-3xl border border-slate-700/60 bg-slate-900/45 backdrop-blur-md p-8 md:p-12 shadow-[0_30px_80px_rgba(2,6,23,0.45)]">
         <div className="mb-10 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">Get In Touch</p>
-          <h1 className="mt-3 text-4xl md:text-5xl font-extrabold text-slate-900">Contact Me</h1>
-          <p className="mt-3 text-gray-600 max-w-2xl mx-auto">Have a project, opportunity, or question? Send a message and I’ll reply quickly with a practical solution.</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-blue-400">Get In Touch</p>
+          <h1 className="mt-3 text-4xl md:text-5xl font-extrabold text-slate-100">Contact Me</h1>
+          <p className="mt-3 text-slate-300 max-w-2xl mx-auto">Have a project, opportunity, or question? Send a message and I&apos;ll reply quickly with a practical solution.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 bg-white rounded-2xl p-6 md:p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-shadow duration-300">            <div>
-            <label htmlFor="name" className="block text-sm font-medium text-slate-700">Full Name</label>
-            <input
-              id="name"
-              type="text"
-              placeholder="Your full name"
-              {...register("name", { required: "Name is required" })}
-              className="mt-1 block w-full rounded-xl border border-slate-300 px-4 py-2 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
-            />
-            {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name.message}</p>}
-          </div>
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 bg-slate-900/90 rounded-2xl p-6 md:p-8 border border-slate-700 shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-slate-300">Full Name</label>
+              <input
+                id="name"
+                type="text"
+                placeholder="Your full name"
+                {...register("name", { required: "Name is required" })}
+                className="mt-1 block w-full rounded-xl border border-slate-600 bg-slate-950/70 px-4 py-2 text-slate-100 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500"
+              />
+              {errors.name && <p className="text-red-400 text-sm mt-1">{errors.name.message}</p>}
+            </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-slate-700">Email Address</label>
+              <label htmlFor="email" className="block text-sm font-medium text-slate-300">Email Address</label>
               <input
                 id="email"
                 type="email"
@@ -67,21 +69,21 @@ function Contact() {
                   required: "Email is required",
                   pattern: { value: /\S+@\S+\.\S+/, message: "Enter a valid email" },
                 })}
-                className="mt-1 block w-full rounded-xl border border-slate-300 px-4 py-2 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 block w-full rounded-xl border border-slate-600 bg-slate-950/70 px-4 py-2 text-slate-100 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500"
               />
-              {errors.email && <p className="text-red-600 text-sm mt-1">{errors.email.message}</p>}
+              {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email.message}</p>}
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-slate-700">Message</label>
+              <label htmlFor="message" className="block text-sm font-medium text-slate-300">Message</label>
               <textarea
                 id="message"
                 rows="5"
                 placeholder="How can I help you?"
                 {...register("message", { required: "Message is required" })}
-                className="mt-1 block w-full rounded-xl border border-slate-300 px-4 py-2 text-slate-900 focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 block w-full rounded-xl border border-slate-600 bg-slate-950/70 px-4 py-2 text-slate-100 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500"
               />
-              {errors.message && <p className="text-red-600 text-sm mt-1">{errors.message.message}</p>}
+              {errors.message && <p className="text-red-400 text-sm mt-1">{errors.message.message}</p>}
             </div>
 
             <button

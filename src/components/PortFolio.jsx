@@ -1,50 +1,75 @@
 import React from "react";
+import {
+  FaBookOpen,
+  FaChalkboardTeacher,
+  FaStickyNote,
+  FaPenNib,
+  FaReact,
+  FaNodeJs,
+} from "react-icons/fa";
+import { SiJavascript, SiTailwindcss, SiVercel, SiExpress, SiMongodb, SiSocketdotio, SiWebrtc } from "react-icons/si";
 
 function PortFolio() {
+  const techIcons = {
+    "React.js": FaReact,
+    JavaScript: SiJavascript,
+    "Tailwind CSS": SiTailwindcss,
+    Vercel: SiVercel,
+    "Node.js": FaNodeJs,
+    "Express.js": SiExpress,
+    MongoDB: SiMongodb,
+    "Socket.io": SiSocketdotio,
+    WebRTC: SiWebrtc,
+  };
+
   const projects = [
     {
       id: 1,
+      name: "CourseApp",
+      description: "Course discovery and learning platform where users can browse, access, and manage educational content.",
+      features: ["Course listing and navigation", "Clean responsive UI", "Learner-friendly flow"],
+      impact: "Improved access to structured learning content with a fast and simple course browsing experience.",
+      techStack: ["React.js", "JavaScript", "Tailwind CSS", "Vercel"],
+      liveLink: "https://courseapp-kohl.vercel.app",
+      sourceCode: "https://github.com/shivanshugupta456/courseapp.git",
+      icon: FaBookOpen,
+      gradient: "from-sky-500 to-cyan-500",
+    },
+    {
+      id: 2,
       name: "Live Class",
       description: "Interactive online learning platform with video streaming, chat, and collaborative whiteboard.",
       features: ["Real-time video conferencing", "Live chat with moderation", "Collaborative whiteboard"],
       impact: "Boosted remote learning engagement by delivering smooth real-time interactions and collaboration.",
       techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "WebRTC"],
-      liveLink: "https://live-class-flame.vercel.app",
+      liveLink: "https://live-class-fedg.vercel.app",
       sourceCode: "https://github.com/shivanshugupta456/live-class.git",
-      image: "https://via.placeholder.com/400x250/4F46E5/FFFFFF?text=Live+Class"
-    },
-    {
-      id: 2,
-      name: "To-Do App",
-      description: "Task management app for prioritizing work, tracking progress, and improving productivity.",
-      features: ["Priority and due-date labels", "Local data persistence", "Responsive UI"],
-      impact: "Helped users stay organized by ensuring tasks are tracked and updated in real-time.",
-      techStack: ["HTML", "CSS", "JavaScript", "Local Storage"],
-      liveLink: "https://shivanshugupta456.github.io/To-Do/",
-      sourceCode: "https://github.com/shivanshugupta456/To-Do.git",
-      image: "https://via.placeholder.com/400x250/10B981/FFFFFF?text=To-Do+App"
+      icon: FaChalkboardTeacher,
+      gradient: "from-indigo-500 to-violet-600",
     },
     {
       id: 3,
-      name: "Employee Management System",
-      description: "Dashboard for employee records and role-based access, with reporting and analytics.",
-      features: ["CRUD employee profiles", "Role-based access control", "Performance analytics"],
-      impact: "Reduced HR process time by 40% through centralized record maintenance and reporting.",
-      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
-      liveLink: "https://employee-management-system-gamma-six.vercel.app",
-      sourceCode: "https://github.com/shivanshugupta456/Employee-Management-System-.git",
-      image: "https://via.placeholder.com/400x250/6366F1/FFFFFF?text=Employee+Management"
+      name: "NoteTaking App",
+      description: "A productivity-focused note management app to create, organize, and maintain notes efficiently.",
+      features: ["Create and manage notes", "Simple and responsive interface", "Fast note access workflow"],
+      impact: "Helped streamline daily note organization with a clean UI and quick interaction flow.",
+      techStack: ["React.js", "JavaScript", "Tailwind CSS", "Vercel"],
+      liveLink: "https://notetakingapp-chi.vercel.app/",
+      sourceCode: "https://github.com/shivanshugupta456/notetakingapp.git",
+      icon: FaStickyNote,
+      gradient: "from-emerald-500 to-teal-500",
     },
     {
       id: 4,
-      name: "Myntra Functional Clone",
-      description: "E-commerce clone with product browsing, search, cart, and checkout flows.",
-      features: ["Smart product filters", "Seamless cart management", "Checkout workflow"],
-      impact: "Demonstrated scalable e-commerce architecture and improved conversion-style flows.",
-      techStack: ["HTML", "CSS", "JavaScript", "React.js"],
-      liveLink: "https://shivanshugupta456.github.io/Myntra-Functional-Clone/",
-      sourceCode: "https://github.com/shivanshugupta456/Myntra-Functional-Clone.git",
-      image: "https://via.placeholder.com/400x250/EC4899/FFFFFF?text=Myntra+Clone"
+      name: "Blog App",
+      description: "A modern blogging platform to create, publish, and explore articles with a clean reading experience.",
+      features: ["Create and publish blog posts", "Responsive reading interface", "User-friendly content flow"],
+      impact: "Enabled smooth content sharing and improved reading experience with a clean and scalable UI.",
+      techStack: ["React.js", "JavaScript", "Tailwind CSS", "Vercel"],
+      liveLink: "https://blog-app-orpin-nine.vercel.app/",
+      sourceCode: "https://github.com/shivanshugupta456/blog-app.git",
+      icon: FaPenNib,
+      gradient: "from-orange-500 to-amber-500",
     },
   ];
 
@@ -53,17 +78,23 @@ function PortFolio() {
       name="Portfolio"
       className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10"
     >
-      <div>
-        <h1 className="text-3xl font-bold mb-5">Portfolio</h1>
-        <span className="underline font-semibold">Featured Projects</span>
+      <div className="rounded-3xl border border-slate-700/60 bg-slate-900/45 backdrop-blur-md p-6 md:p-8 shadow-[0_30px_80px_rgba(2,6,23,0.45)]">
+        <h1 className="text-3xl font-bold mb-5 text-slate-100">Portfolio</h1>
+        <span className="underline font-semibold text-slate-300">Featured Projects</span>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8">
-          {projects.map((project) => (
+          {projects.map((project) => {
+            const ProjectIcon = project.icon;
+
+            return (
             <div
-              className="border-2 border-gray-200 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden bg-white"
+              className="border border-slate-700 rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 overflow-hidden bg-slate-900/90"
               key={project.id}
             >
               {/* Project Image */}
-              <div className="h-48 bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center">
+              <div className={`h-48 bg-gradient-to-r ${project.gradient} flex flex-col items-center justify-center gap-4`}>
+                <div className="flex h-20 w-20 items-center justify-center rounded-3xl border border-white/20 bg-white/10 shadow-lg backdrop-blur-sm">
+                  <ProjectIcon className="text-white" size={34} />
+                </div>
                 <h2 className="text-white text-2xl font-bold text-center px-4">
                   {project.name}
                 </h2>
@@ -71,12 +102,12 @@ function PortFolio() {
 
               {/* Project Details */}
               <div className="p-6">
-                <h3 className="font-bold text-xl mb-3 text-gray-900">{project.name}</h3>
-                <p className="text-gray-700 mb-2 leading-relaxed">{project.description}</p>
+                <h3 className="font-bold text-xl mb-3 text-slate-100">{project.name}</h3>
+                <p className="text-slate-300 mb-2 leading-relaxed">{project.description}</p>
 
                 <div className="mb-3">
-                  <h4 className="text-sm font-semibold text-slate-600">Key Features</h4>
-                  <ul className="list-disc list-inside text-gray-700 text-sm">
+                  <h4 className="text-sm font-semibold text-slate-300">Key Features</h4>
+                  <ul className="list-disc list-inside text-slate-300 text-sm">
                     {project.features.map((feature, idx) => (
                       <li key={idx}>{feature}</li>
                     ))}
@@ -84,21 +115,28 @@ function PortFolio() {
                 </div>
 
                 <div className="mb-3">
-                  <h4 className="text-sm font-semibold text-slate-600">Real Impact</h4>
-                  <p className="text-gray-700 text-sm">{project.impact}</p>
+                  <h4 className="text-sm font-semibold text-slate-300">Real Impact</h4>
+                  <p className="text-slate-300 text-sm">{project.impact}</p>
                 </div>
 
                 {/* Tech Stack */}
                 <div className="mb-4">
-                  <h4 className="font-semibold text-gray-800 mb-2">Tech Stack:</h4>
+                  <h4 className="font-semibold text-slate-200 mb-2">Tech Stack:</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.techStack.map((tech, index) => (
-                      <span
-                        key={index}
-                        className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-1 rounded-full"
-                      >
-                        {tech}
-                      </span>
+                      (() => {
+                        const TechIcon = techIcons[tech];
+
+                        return (
+                          <span
+                            key={index}
+                            className="inline-flex items-center gap-1.5 bg-blue-500/15 border border-blue-400/30 text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full"
+                          >
+                            {TechIcon ? <TechIcon size={12} /> : null}
+                            {tech}
+                          </span>
+                        );
+                      })()
                     ))}
                   </div>
                 </div>
@@ -124,7 +162,8 @@ function PortFolio() {
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

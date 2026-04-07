@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import pic from "../../public/photo.avif";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-scroll";
 function Navbar() {
   const [menu, setMenu] = useState(false);
@@ -29,53 +30,82 @@ function Navbar() {
   ];
   return (
     <>
-      <div className="max-w-full bg-white shadow-lg fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-opacity-95">
+      <div className="max-w-full fixed top-0 left-0 right-0 z-50 bg-slate-950/70 backdrop-blur-xl border-b border-slate-700/70 shadow-[0_12px_30px_rgba(2,6,23,0.35)]">
         <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-16">
           <div className="flex justify-between items-center h-16">
             {/* Logo & Brand */}
             <div className="flex space-x-3 items-center group cursor-pointer">
               <div className="relative">
-                <div className="absolute inset-0 bg-blue-500 rounded-full blur opacity-50 group-hover:opacity-75 transition duration-300"></div>
-                <img src={pic} className="relative h-12 w-12 rounded-full border-2 border-blue-500" alt="Profile" />
+                <div className="absolute inset-0 bg-cyan-400 rounded-full blur opacity-45 group-hover:opacity-70 transition duration-300"></div>
+                <img src={pic} className="relative h-12 w-12 rounded-full border-2 border-cyan-400/80" alt="Profile" />
               </div>
               <div>
-                <h1 className="font-bold text-lg text-gray-900 tracking-tight">
-                  Shivanshu <span className="text-blue-600">Gupta</span>
+                <h1 className="font-bold text-lg text-slate-100 tracking-tight">
+                  Shivanshu <span className="text-cyan-300">Gupta</span>
                 </h1>
-                <p className="text-xs text-gray-600 font-medium">Full Stack Developer</p>
+                <p className="text-xs text-slate-400 font-medium">Full Stack Developer</p>
               </div>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center">
+            <div className="hidden md:flex items-center gap-4">
               <ul className="flex space-x-1">
                 {navItems.map(({ id, text }) => (
                   <li key={id}>
                     <Link
                       to={text}
+                      spy={true}
+                      activeClass="nav-active"
                       smooth={true}
                       duration={500}
                       offset={-70}
-                      className="px-4 py-2 rounded-lg text-gray-700 font-medium text-sm hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 cursor-pointer relative after:content-[''] after:absolute after:bottom-1 after:left-4 after:right-4 after:h-0.5 after:bg-blue-600 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+                      className="nav-link px-4 py-2 rounded-lg text-slate-200 font-medium text-sm hover:text-white hover:bg-white/10 transition-all duration-300 cursor-pointer relative after:content-[''] after:absolute after:bottom-1 after:left-4 after:right-4 after:h-0.5 after:bg-cyan-300 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
                     >
                       {text}
                     </Link>
                   </li>
                 ))}
               </ul>
+              <div className="flex items-center gap-2">
+                <a
+                  href="https://github.com/shivanshugupta456"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub profile"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-600 text-slate-200 hover:border-slate-400 hover:bg-white/10 hover:text-white transition-all duration-300"
+                >
+                  <FaGithub size={18} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/shivanshu-gupta-5122193aa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn profile"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-blue-400/40 text-blue-300 hover:bg-blue-500 hover:text-white transition-all duration-300"
+                >
+                  <FaLinkedinIn size={18} />
+                </a>
+              </div>
+              <a
+                href="/Shivanshu_Gupta_Internship_Resume-1.pdf"
+                download="Shivanshu-Gupta-Resume.pdf"
+                className="inline-flex items-center justify-center rounded-lg bg-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-300"
+              >
+                Resume
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
             <div className="md:hidden flex items-center">
               <button
                 onClick={() => setMenu(!menu)}
-                className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+                className="p-2 rounded-lg hover:bg-white/10 transition-colors duration-300"
                 aria-label="Toggle menu"
               >
                 {menu ? (
-                  <IoCloseSharp size={28} className="text-gray-900" />
+                  <IoCloseSharp size={28} className="text-slate-100" />
                 ) : (
-                  <AiOutlineMenu size={28} className="text-gray-900" />
+                  <AiOutlineMenu size={28} className="text-slate-100" />
                 )}
               </button>
             </div>
@@ -84,26 +114,72 @@ function Navbar() {
 
         {/* Mobile Navigation */}
         {menu && (
-          <div className="md:hidden border-t border-gray-200 bg-white animate-in fade-in duration-300">
+          <div className="md:hidden border-t border-slate-700 bg-slate-950/95 animate-in fade-in duration-300">
             <ul className="flex flex-col space-y-2 px-4 py-4">
               {navItems.map(({ id, text }) => (
                 <li key={id}>
                   <Link
                     onClick={() => setMenu(!menu)}
                     to={text}
+                    spy={true}
+                    activeClass="nav-active-mobile"
                     smooth={true}
                     duration={500}
                     offset={-70}
-                    className="block px-4 py-2.5 rounded-lg text-gray-700 font-medium hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 cursor-pointer"
+                    className="nav-link-mobile block px-4 py-2.5 rounded-lg text-slate-200 font-medium hover:text-white hover:bg-white/10 transition-all duration-300 cursor-pointer"
                   >
                     {text}
                   </Link>
                 </li>
               ))}
+              <li>
+                <a
+                  href="/Shivanshu_Gupta_Internship_Resume-1.pdf"
+                  download="Shivanshu-Gupta-Resume.pdf"
+                  onClick={() => setMenu(false)}
+                  className="block rounded-lg bg-cyan-400 px-4 py-2.5 text-center text-sm font-semibold text-slate-950 transition-all duration-300 hover:bg-cyan-300"
+                >
+                  Download Resume
+                </a>
+              </li>
+              <li className="grid grid-cols-2 gap-3 pt-2">
+                <a
+                  href="https://github.com/shivanshugupta456"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMenu(false)}
+                  className="block rounded-lg border border-slate-600 px-4 py-2.5 text-center text-sm font-semibold text-slate-100 transition-all duration-300 hover:bg-white/10"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/shivanshu-gupta-5122193aa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMenu(false)}
+                  className="block rounded-lg bg-blue-500 px-4 py-2.5 text-center text-sm font-semibold text-white transition-all duration-300 hover:bg-blue-400"
+                >
+                  LinkedIn
+                </a>
+              </li>
             </ul>
           </div>
         )}
       </div>
+      <style>{`
+        .nav-active {
+          color: #ffffff;
+          background: rgba(255, 255, 255, 0.12);
+        }
+        .nav-active::after {
+          transform: scaleX(1);
+        }
+        .nav-active-mobile {
+          color: #ffffff;
+          background: rgba(255, 255, 255, 0.12);
+          border: 1px solid rgba(103, 232, 249, 0.35);
+        }
+      `}</style>
     </>
   );
 }

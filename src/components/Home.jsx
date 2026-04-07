@@ -1,40 +1,32 @@
 import React from "react";
 
-import pic from "../../public/photo.avif";
-
-import { FaSquareFacebook } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa";
-import { IoLogoYoutube } from "react-icons/io";
-
-import { SiMongodb } from "react-icons/si";
-import { SiExpress } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
-import { FaNodeJs } from "react-icons/fa6";
+import shivanshu from "../../public/shivanshu.png";
 
 import { ReactTyped } from "react-typed";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 function Home() {
   return (
     <>
       <div
         name="Home"
-        className="min-h-[85vh] max-w-screen-2xl container mx-auto px-4 md:px-20 py-20"
+        className="min-h-[85vh] max-w-screen-2xl container mx-auto px-4 md:px-20 pt-24 pb-20"
       >
-        <div className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-sky-50 rounded-3xl shadow-[0_40px_80px_rgba(34,197,94,0.12)] border border-slate-200 p-8 md:p-12">
+        <div className="home-fade-in relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl shadow-[0_40px_80px_rgba(2,6,23,0.45)] border border-slate-700/70 p-8 md:p-12">
           {/* Abstract Decorations */}
-          <div className="pointer-events-none absolute -top-10 -left-6 h-40 w-40 rounded-full bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 opacity-30 blur-xl" />
-          <div className="pointer-events-none absolute bottom-0 right-0 h-44 w-44 rounded-full bg-gradient-to-r from-cyan-300 via-blue-300 to-violet-300 opacity-30 blur-xl" />
+          <div className="home-float-slow pointer-events-none absolute -top-10 -left-6 h-40 w-40 rounded-full bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 opacity-30 blur-xl" />
+          <div className="home-float pointer-events-none absolute bottom-0 right-0 h-44 w-44 rounded-full bg-gradient-to-r from-cyan-300 via-blue-300 to-violet-300 opacity-30 blur-xl" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-5 z-10">
-              <p className="text-xs md:text-sm text-blue-700 font-semibold tracking-widest uppercase">Welcome to my portfolio</p>
-              <div className="text-3xl md:text-5xl font-black leading-tight">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
+            <div className="home-fade-up home-delay-1 space-y-6 z-10">
+              <p className="text-xs md:text-sm text-blue-300 font-semibold tracking-widest uppercase">Welcome to my portfolio</p>
+              <div className="text-3xl md:text-5xl font-black leading-[1.1] text-slate-100">
                 <span>Hey, I'm </span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-500">Shivanshu</span>
-                <div className="mt-2 flex items-center gap-3">
-                  <span className="text-2xl">a</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500">Shivanshu</span>
+                <div className="mt-3 flex items-center gap-3">
+                  <span className="text-2xl text-slate-200">a</span>
                   <ReactTyped
-                    className="text-2xl md:text-4xl font-bold text-blue-800"
+                    className="text-2xl md:text-4xl font-bold text-blue-300"
                     strings={["Full Stack Developer", "React Developer", "MERN Expert"]}
                     typeSpeed={60}
                     backSpeed={50}
@@ -42,53 +34,153 @@ function Home() {
                   />
                 </div>
               </div>
-              <p className="text-gray-700 md:text-lg leading-relaxed md:leading-loose">
+              <p className="max-w-xl text-slate-300 md:text-lg leading-relaxed md:leading-loose">
                 I build scalable and user-centric web experiences using React, Node.js and modern UI patterns. My goal is to ship clean and performant applications with pixel-perfect design.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a href="#Contact" className="inline-flex items-center justify-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-blue-700 transition-all duration-300">
+              <div className="flex flex-col sm:flex-row gap-3 pt-1">
+                <a href="mailto:rajkishoregupta716@gmail.com" className="inline-flex items-center justify-center bg-blue-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-blue-500/20 hover:bg-blue-400 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300">
                   Contact Me
                 </a>
-                <a href="#Portfolio" className="inline-flex items-center justify-center border border-blue-600 text-blue-600 font-semibold px-6 py-3 rounded-xl hover:bg-blue-100 transition-all duration-300">
+                <a
+                  href="/Shivanshu_Gupta_Internship_Resume-1.pdf"
+                  download="Shivanshu-Gupta-Resume.pdf"
+                  className="inline-flex items-center justify-center border border-cyan-400/50 bg-cyan-400/10 text-cyan-200 font-semibold px-6 py-3 rounded-xl shadow-lg shadow-cyan-500/10 hover:bg-cyan-400/20 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300"
+                >
+                  Download Resume
+                </a>
+                <a href="#Portfolio" className="inline-flex items-center justify-center border border-slate-500 text-slate-100 font-semibold px-6 py-3 rounded-xl hover:bg-slate-800 hover:-translate-y-0.5 transition-all duration-300">
                   Explore Work
                 </a>
               </div>
 
+              <div className="flex flex-wrap gap-3 pt-1">
+                <a
+                  href="https://github.com/shivanshugupta456"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub profile"
+                  className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-slate-500 bg-slate-900/70 text-slate-100 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-slate-800 transition-all duration-300"
+                >
+                  <FaGithub size={18} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/shivanshu-gupta-5122193aa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn profile"
+                  className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500 text-white shadow-lg shadow-blue-500/20 hover:-translate-y-0.5 hover:bg-blue-400 transition-all duration-300"
+                >
+                  <FaLinkedinIn size={18} />
+                </a>
+              </div>
+
               <div className="flex flex-wrap gap-3 mt-4">
-                <span className="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs">React</span>
-                <span className="px-3 py-1 rounded-full bg-green-100 text-green-800 text-xs">Node.js</span>
-                <span className="px-3 py-1 rounded-full bg-orange-100 text-orange-800 text-xs">Tailwind</span>
-                <span className="px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-xs">JWT</span>
+                <span className="home-chip home-delay-2 px-3 py-1 rounded-full bg-blue-500/15 border border-blue-400/30 text-blue-200 text-xs">React</span>
+                <span className="home-chip home-delay-3 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-200 text-xs">Node.js</span>
+                <span className="home-chip home-delay-4 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-200 text-xs">Tailwind</span>
+                <span className="home-chip home-delay-5 px-3 py-1 rounded-full bg-violet-500/15 border border-violet-400/30 text-violet-200 text-xs">JWT</span>
               </div>
             </div>
 
-            <div className="relative z-10 flex justify-center md:justify-end">
-              <div className="relative w-[280px] h-[280px] md:w-[360px] md:h-[360px] rounded-full bg-white shadow-2xl overflow-hidden">
-                <img src={pic} alt="Profile" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.35),rgba(129,140,248,0.2),transparent)]" />
-                <div className="absolute bottom-3 right-3 border border-white text-xs text-white px-3 py-1 rounded-full bg-blue-700/80 backdrop-blur-sm">Full Stack</div>
+            <div className="home-fade-up home-delay-2 relative z-10 flex justify-center md:justify-end md:pr-3">
+              <div className="relative group home-photo-pop">
+                <div className="absolute -inset-4 bg-gradient-to-br from-sky-300/40 via-indigo-300/30 to-cyan-200/40 rounded-[2rem] blur-2xl opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 rounded-[1.8rem] bg-white/85 backdrop-blur-sm border border-white/80 shadow-[0_16px_36px_rgba(15,23,42,0.24)]"></div>
+                <div className="absolute inset-2 rounded-[1.4rem] border border-slate-300/80"></div>
+                <img
+                  src={shivanshu}
+                  alt="Shivanshu Gupta"
+                  className="relative rounded-[1.5rem] w-[18.5rem] h-[22rem] md:w-80 md:h-96 object-cover object-top border border-white/60 shadow-[0_14px_30px_rgba(15,23,42,0.22)] group-hover:-translate-y-1 group-hover:scale-[1.02] transition-all duration-300"
+                  style={{
+                    filter: "contrast(1.08) brightness(1.04) saturate(1.03)",
+                    imageRendering: "auto",
+                  }}
+                />
+                <div className="absolute inset-0 rounded-[1.5rem] bg-[radial-gradient(circle_at_20%_18%,rgba(255,255,255,0.32),rgba(255,255,255,0.02)_44%,transparent_60%)] pointer-events-none"></div>
               </div>
             </div>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 z-10">
-            <div className="p-4 bg-white border border-slate-200 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5 z-10">
+            <div className="home-fade-up home-delay-3 h-full p-5 md:p-6 bg-white/95 border border-slate-200 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
               <p className="text-xs uppercase tracking-wide text-sky-600 font-bold">Publications</p>
-              <h3 className="text-xl font-semibold text-slate-900">5+ Live Projects</h3>
-              <p className="text-gray-600 text-sm">Rich experiences built with real-time communication, secure auth, and responsive UI.</p>
+              <h3 className="text-xl font-semibold text-slate-900">4 Live Projects</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Rich experiences built with real-time communication, secure auth, and responsive UI.</p>
             </div>
-            <div className="p-4 bg-white border border-slate-200 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div className="home-fade-up home-delay-4 h-full p-5 md:p-6 bg-white/95 border border-slate-200 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
               <p className="text-xs uppercase tracking-wide text-sky-600 font-bold">Focus Areas</p>
               <h3 className="text-xl font-semibold text-slate-900">MERN + Modern UI</h3>
-              <p className="text-gray-600 text-sm">From clean interface to robust API design, I deliver production-grade applications.
+              <p className="text-gray-600 text-sm leading-relaxed">From clean interface to robust API design, I deliver production-grade applications.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <hr className="mt-10 border-slate-200" />
+      <hr className="mt-10 border-slate-700/70" />
+      <style>{`
+        .home-fade-in {
+          animation: homeFadeIn 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .home-fade-up {
+          opacity: 0;
+          animation: homeFadeUp 720ms cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .home-delay-1 { animation-delay: 120ms; }
+        .home-delay-2 { animation-delay: 220ms; }
+        .home-delay-3 { animation-delay: 320ms; }
+        .home-delay-4 { animation-delay: 420ms; }
+        .home-delay-5 { animation-delay: 520ms; }
+        .home-photo-pop {
+          animation: homePhotoPop 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+          animation-delay: 220ms;
+        }
+        .home-float {
+          animation: homeFloat 7s ease-in-out infinite;
+        }
+        .home-float-slow {
+          animation: homeFloatSlow 10s ease-in-out infinite;
+        }
+        .home-chip {
+          transition: transform 220ms ease, box-shadow 220ms ease;
+        }
+        .home-chip:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 20px rgba(59, 130, 246, 0.18);
+        }
+        @keyframes homeFadeIn {
+          from { opacity: 0; transform: translateY(14px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes homeFadeUp {
+          from { opacity: 0; transform: translateY(24px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes homePhotoPop {
+          from { opacity: 0; transform: translateY(22px) scale(0.96); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        @keyframes homeFloat {
+          0%, 100% { transform: translate3d(0, 0, 0); }
+          50% { transform: translate3d(-8px, -8px, 0); }
+        }
+        @keyframes homeFloatSlow {
+          0%, 100% { transform: translate3d(0, 0, 0); }
+          50% { transform: translate3d(8px, -10px, 0); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .home-fade-in,
+          .home-fade-up,
+          .home-photo-pop,
+          .home-float,
+          .home-float-slow {
+            animation: none !important;
+            opacity: 1 !important;
+            transform: none !important;
+          }
+        }
+      `}</style>
     </>
   );
 }

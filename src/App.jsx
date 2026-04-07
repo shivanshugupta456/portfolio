@@ -11,7 +11,7 @@ import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <>
-      <div>
+      <div className="min-h-screen bg-slate-950 bg-[radial-gradient(circle_at_12%_18%,rgba(30,64,175,0.28),transparent_30%),radial-gradient(circle_at_88%_82%,rgba(14,165,233,0.2),transparent_28%)]">
         <Navbar />
         <Home />
         <About />
