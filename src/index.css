@@ -1,6 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@500&display=swap");
 @import "tailwindcss";
 
+html {
+  color-scheme: dark;
+  background-color: #020617;
+}
+
+body,
+#root {
+  min-height: 100%;
+  background-color: #020617;
+}
+
 body {
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  color: #e2e8f0;
 }
