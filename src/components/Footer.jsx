@@ -7,14 +7,17 @@ import {
   FaEnvelope,
   FaArrowRight,
 } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 function Footer() {
+  const quickLinks = ["Home", "About", "Portfolio", "Experiance", "Contact"];
+
   return (
     <footer className="relative mt-20 overflow-hidden border-t border-slate-700/70 bg-slate-950 text-slate-100">
       <div className="pointer-events-none absolute left-0 top-0 h-40 w-40 rounded-full bg-cyan-400/10 blur-3xl" />
       <div className="pointer-events-none absolute right-0 bottom-0 h-48 w-48 rounded-full bg-blue-500/10 blur-3xl" />
 
-      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 py-14">
+      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 py-12 md:py-14">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.4fr_0.9fr_1fr]">
           <div className="space-y-5">
             <div>
@@ -45,11 +48,19 @@ function Footer() {
           <div>
             <h3 className="text-lg font-bold text-white">Quick Links</h3>
             <ul className="mt-5 space-y-3 text-sm text-slate-300">
-              <li><a href="#Home" className="transition-colors duration-300 hover:text-white">Home</a></li>
-              <li><a href="#About" className="transition-colors duration-300 hover:text-white">About</a></li>
-              <li><a href="#Portfolio" className="transition-colors duration-300 hover:text-white">Portfolio</a></li>
-              <li><a href="#Experiance" className="transition-colors duration-300 hover:text-white">Experience</a></li>
-              <li><a href="#Contact" className="transition-colors duration-300 hover:text-white">Contact</a></li>
+              {quickLinks.map((item) => (
+                <li key={item}>
+                  <Link
+                    to={item}
+                    smooth={true}
+                    duration={500}
+                    offset={-70}
+                    className="cursor-pointer transition-colors duration-300 hover:text-white"
+                  >
+                    {item === "Experiance" ? "Experience" : item}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

@@ -4,6 +4,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-scroll";
+
 function Navbar() {
   const [menu, setMenu] = useState(false);
   const navItems = [
@@ -31,19 +32,19 @@ function Navbar() {
   return (
     <>
       <div className="max-w-full fixed top-0 left-0 right-0 z-50 bg-slate-950/70 backdrop-blur-xl border-b border-slate-700/70 shadow-[0_12px_30px_rgba(2,6,23,0.35)]">
-        <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-16">
-          <div className="flex justify-between items-center h-16">
+        <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-[4.5rem] md:h-16">
+          <div className="flex justify-between items-center h-[4.5rem] md:h-16 gap-3">
             {/* Logo & Brand */}
-            <div className="flex space-x-3 items-center group cursor-pointer">
+            <div className="flex min-w-0 space-x-3 items-center group cursor-pointer">
               <div className="relative">
                 <div className="absolute inset-0 bg-cyan-400 rounded-full blur opacity-45 group-hover:opacity-70 transition duration-300"></div>
-                <img src={pic} className="relative h-12 w-12 rounded-full border-2 border-cyan-400/80" alt="Profile" />
+                <img src={pic} className="relative h-10 w-10 md:h-12 md:w-12 rounded-full border-2 border-cyan-400/80" alt="Profile" />
               </div>
-              <div>
-                <h1 className="font-bold text-lg text-slate-100 tracking-tight">
+              <div className="min-w-0">
+                <h1 className="truncate font-bold text-base md:text-lg text-slate-100 tracking-tight">
                   Shivanshu <span className="text-cyan-300">Gupta</span>
                 </h1>
-                <p className="text-xs text-slate-400 font-medium">Full Stack Developer</p>
+                <p className="truncate text-[11px] md:text-xs text-slate-400 font-medium">Full Stack Developer</p>
               </div>
             </div>
 
@@ -99,7 +100,7 @@ function Navbar() {
             <div className="md:hidden flex items-center">
               <button
                 onClick={() => setMenu(!menu)}
-                className="p-2 rounded-lg hover:bg-white/10 transition-colors duration-300"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-700/80 bg-slate-900/90 hover:bg-white/10 transition-colors duration-300"
                 aria-label="Toggle menu"
               >
                 {menu ? (
@@ -115,7 +116,7 @@ function Navbar() {
         {/* Mobile Navigation */}
         {menu && (
           <div className="md:hidden border-t border-slate-700 bg-slate-950/95 animate-in fade-in duration-300">
-            <ul className="flex flex-col space-y-2 px-4 py-4">
+            <ul className="flex flex-col space-y-2 px-4 pb-5 pt-4">
               {navItems.map(({ id, text }) => (
                 <li key={id}>
                   <Link
@@ -126,7 +127,7 @@ function Navbar() {
                     smooth={true}
                     duration={500}
                     offset={-70}
-                    className="nav-link-mobile block px-4 py-2.5 rounded-lg text-slate-200 font-medium hover:text-white hover:bg-white/10 transition-all duration-300 cursor-pointer"
+                    className="nav-link-mobile block rounded-xl border border-transparent px-4 py-3 text-slate-200 font-medium hover:text-white hover:bg-white/10 transition-all duration-300 cursor-pointer"
                   >
                     {text}
                   </Link>
@@ -137,7 +138,7 @@ function Navbar() {
                   href="/Shivanshu_Gupta_Internship_Resume-1.pdf"
                   download="Shivanshu-Gupta-Resume.pdf"
                   onClick={() => setMenu(false)}
-                  className="block rounded-lg bg-cyan-400 px-4 py-2.5 text-center text-sm font-semibold text-slate-950 transition-all duration-300 hover:bg-cyan-300"
+                  className="block rounded-xl bg-cyan-400 px-4 py-3 text-center text-sm font-semibold text-slate-950 transition-all duration-300 hover:bg-cyan-300"
                 >
                   Download Resume
                 </a>
@@ -148,7 +149,7 @@ function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMenu(false)}
-                  className="block rounded-lg border border-slate-600 px-4 py-2.5 text-center text-sm font-semibold text-slate-100 transition-all duration-300 hover:bg-white/10"
+                  className="block rounded-xl border border-slate-600 px-4 py-3 text-center text-sm font-semibold text-slate-100 transition-all duration-300 hover:bg-white/10"
                 >
                   GitHub
                 </a>
@@ -157,7 +158,7 @@ function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMenu(false)}
-                  className="block rounded-lg bg-blue-500 px-4 py-2.5 text-center text-sm font-semibold text-white transition-all duration-300 hover:bg-blue-400"
+                  className="block rounded-xl bg-blue-500 px-4 py-3 text-center text-sm font-semibold text-white transition-all duration-300 hover:bg-blue-400"
                 >
                   LinkedIn
                 </a>

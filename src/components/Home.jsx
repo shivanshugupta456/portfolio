@@ -10,23 +10,23 @@ function Home() {
     <>
       <div
         name="Home"
-        className="min-h-[85vh] max-w-screen-2xl container mx-auto px-4 md:px-20 pt-24 pb-20"
+        className="min-h-[85vh] max-w-screen-2xl container mx-auto px-4 md:px-20 pt-24 md:pt-24 pb-14 md:pb-20"
       >
-        <div className="home-fade-in relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl shadow-[0_40px_80px_rgba(2,6,23,0.45)] border border-slate-700/70 p-8 md:p-12">
+        <div className="home-fade-in relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-[2rem] md:rounded-3xl shadow-[0_40px_80px_rgba(2,6,23,0.45)] border border-slate-700/70 p-5 sm:p-7 md:p-12">
           {/* Abstract Decorations */}
           <div className="home-float-slow pointer-events-none absolute -top-10 -left-6 h-40 w-40 rounded-full bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 opacity-30 blur-xl" />
           <div className="home-float pointer-events-none absolute bottom-0 right-0 h-44 w-44 rounded-full bg-gradient-to-r from-cyan-300 via-blue-300 to-violet-300 opacity-30 blur-xl" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="home-fade-up home-delay-1 space-y-6 z-10">
               <p className="text-xs md:text-sm text-blue-300 font-semibold tracking-widest uppercase">Welcome to my portfolio</p>
-              <div className="text-3xl md:text-5xl font-black leading-[1.1] text-slate-100">
+              <div className="text-[2rem] sm:text-[2.35rem] md:text-5xl font-black leading-[1.05] md:leading-[1.1] text-slate-100">
                 <span>Hey, I'm </span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500">Shivanshu</span>
-                <div className="mt-3 flex items-center gap-3">
-                  <span className="text-2xl text-slate-200">a</span>
+                <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2">
+                  <span className="text-xl sm:text-2xl text-slate-200">a</span>
                   <ReactTyped
-                    className="text-2xl md:text-4xl font-bold text-blue-300"
+                    className="text-xl sm:text-2xl md:text-4xl font-bold text-blue-300"
                     strings={["Full Stack Developer", "React Developer", "MERN Expert"]}
                     typeSpeed={60}
                     backSpeed={50}
@@ -34,22 +34,22 @@ function Home() {
                   />
                 </div>
               </div>
-              <p className="max-w-xl text-slate-300 md:text-lg leading-relaxed md:leading-loose">
+              <p className="max-w-xl text-sm sm:text-base text-slate-300 md:text-lg leading-7 md:leading-loose">
                 I build scalable and user-centric web experiences using React, Node.js and modern UI patterns. My goal is to ship clean and performant applications with pixel-perfect design.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 pt-1">
-                <a href="mailto:rajkishoregupta716@gmail.com" className="inline-flex items-center justify-center bg-blue-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-blue-500/20 hover:bg-blue-400 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300">
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:flex gap-3 pt-1">
+                <a href="mailto:rajkishoregupta716@gmail.com" className="inline-flex min-h-12 items-center justify-center bg-blue-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-blue-500/20 hover:bg-blue-400 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300">
                   Contact Me
                 </a>
                 <a
                   href="/Shivanshu_Gupta_Internship_Resume-1.pdf"
                   download="Shivanshu-Gupta-Resume.pdf"
-                  className="inline-flex items-center justify-center border border-cyan-400/50 bg-cyan-400/10 text-cyan-200 font-semibold px-6 py-3 rounded-xl shadow-lg shadow-cyan-500/10 hover:bg-cyan-400/20 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300"
+                  className="inline-flex min-h-12 items-center justify-center border border-cyan-400/50 bg-cyan-400/10 text-cyan-200 font-semibold px-6 py-3 rounded-xl shadow-lg shadow-cyan-500/10 hover:bg-cyan-400/20 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300"
                 >
                   Download Resume
                 </a>
-                <a href="#Portfolio" className="inline-flex items-center justify-center border border-slate-500 text-slate-100 font-semibold px-6 py-3 rounded-xl hover:bg-slate-800 hover:-translate-y-0.5 transition-all duration-300">
+                <a href="#Portfolio" className="inline-flex min-h-12 items-center justify-center sm:col-span-2 xl:col-span-1 border border-slate-500 text-slate-100 font-semibold px-6 py-3 rounded-xl hover:bg-slate-800 hover:-translate-y-0.5 transition-all duration-300">
                   Explore Work
                 </a>
               </div>
@@ -83,7 +83,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="home-fade-up home-delay-2 relative z-10 flex justify-center md:justify-end md:pr-3">
+            <div className="home-fade-up home-delay-2 relative z-10 flex justify-center md:justify-end md:pr-3 pt-2 md:pt-0">
               <div className="relative group home-photo-pop">
                 <div className="absolute -inset-4 bg-gradient-to-br from-sky-300/40 via-indigo-300/30 to-cyan-200/40 rounded-[2rem] blur-2xl opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 rounded-[1.8rem] bg-white/85 backdrop-blur-sm border border-white/80 shadow-[0_16px_36px_rgba(15,23,42,0.24)]"></div>
@@ -91,7 +91,7 @@ function Home() {
                 <img
                   src={shivanshu}
                   alt="Shivanshu Gupta"
-                  className="relative rounded-[1.5rem] w-[18.5rem] h-[22rem] md:w-80 md:h-96 object-cover object-top border border-white/60 shadow-[0_14px_30px_rgba(15,23,42,0.22)] group-hover:-translate-y-1 group-hover:scale-[1.02] transition-all duration-300"
+                  className="relative rounded-[1.5rem] w-[min(100%,19rem)] h-[23rem] sm:w-[20rem] sm:h-[24rem] md:w-80 md:h-96 object-cover object-top border border-white/60 shadow-[0_14px_30px_rgba(15,23,42,0.22)] group-hover:-translate-y-1 group-hover:scale-[1.02] transition-all duration-300"
                   style={{
                     filter: "contrast(1.08) brightness(1.04) saturate(1.03)",
                     imageRendering: "auto",
@@ -102,7 +102,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5 z-10">
+          <div className="mt-8 md:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 z-10">
             <div className="home-fade-up home-delay-3 h-full p-5 md:p-6 bg-white/95 border border-slate-200 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
               <p className="text-xs uppercase tracking-wide text-sky-600 font-bold">Publications</p>
               <h3 className="text-xl font-semibold text-slate-900">4 Live Projects</h3>
@@ -118,7 +118,7 @@ function Home() {
         </div>
       </div>
 
-      <hr className="mt-10 border-slate-700/70" />
+      <hr className="mt-8 md:mt-10 border-slate-700/70" />
       <style>{`
         .home-fade-in {
           animation: homeFadeIn 700ms cubic-bezier(0.22, 1, 0.36, 1) both;

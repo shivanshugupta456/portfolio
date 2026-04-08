@@ -76,18 +76,18 @@ function PortFolio() {
   return (
     <div
       name="Portfolio"
-      className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10"
+      className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-8 md:mt-10"
     >
-      <div className="rounded-3xl border border-slate-700/60 bg-slate-900/45 backdrop-blur-md p-6 md:p-8 shadow-[0_30px_80px_rgba(2,6,23,0.45)]">
+      <div className="rounded-[2rem] md:rounded-3xl border border-slate-700/60 bg-slate-900/45 backdrop-blur-md p-5 sm:p-6 md:p-8 shadow-[0_30px_80px_rgba(2,6,23,0.45)]">
         <h1 className="text-3xl font-bold mb-5 text-slate-100">Portfolio</h1>
         <span className="underline font-semibold text-slate-300">Featured Projects</span>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 my-7 md:my-8">
           {projects.map((project) => {
             const ProjectIcon = project.icon;
 
             return (
             <div
-              className="border border-slate-700 rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 overflow-hidden bg-slate-900/90"
+              className="border border-slate-700 rounded-[1.6rem] shadow-lg hover:shadow-2xl md:hover:scale-[1.02] transition-all duration-300 overflow-hidden bg-slate-900/90"
               key={project.id}
             >
               {/* Project Image */}
@@ -101,7 +101,7 @@ function PortFolio() {
               </div>
 
               {/* Project Details */}
-              <div className="p-6">
+              <div className="p-5 md:p-6">
                 <h3 className="font-bold text-xl mb-3 text-slate-100">{project.name}</h3>
                 <p className="text-slate-300 mb-2 leading-relaxed">{project.description}</p>
 
@@ -142,12 +142,12 @@ function PortFolio() {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex space-x-3">
+                <div className="flex flex-col sm:flex-row gap-3">
                   <a
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg text-center transition-colors duration-300"
+                    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl text-center transition-colors duration-300"
                   >
                     Live Demo
                   </a>
@@ -155,7 +155,7 @@ function PortFolio() {
                     href={project.sourceCode}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-gray-800 hover:bg-gray-900 text-white font-semibold py-2 px-4 rounded-lg text-center transition-colors duration-300"
+                    className="flex-1 bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-4 rounded-xl text-center transition-colors duration-300"
                   >
                     Source Code
                   </a>
