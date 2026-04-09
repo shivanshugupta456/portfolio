@@ -1,4 +1,9 @@
 import React from "react";
+import courseAppThumb from "../../public/courseapp-thumb.png";
+import liveClassThumb from "../../public/live-class-thumb.png";
+import noteTakingThumb from "../../public/notetaking-thumb.png";
+import blogThumb from "../../public/blog-thumb.png";
+import chatAppThumb from "../../public/chatapp-thumb.png";
 import {
   FaBookOpen,
   FaChalkboardTeacher,
@@ -27,60 +32,65 @@ function PortFolio() {
     {
       id: 1,
       name: "CourseApp",
-      description: "Course discovery and learning platform where users can browse, access, and manage educational content.",
-      features: ["Course listing and navigation", "Clean responsive UI", "Learner-friendly flow"],
-      impact: "Improved access to structured learning content with a fast and simple course browsing experience.",
+      description: "A focused course platform built to make discovering learning content simple, clear, and easy to navigate for modern learners.",
+      features: ["Course discovery interface", "Clean responsive navigation", "Learner-friendly browsing flow"],
+      impact: "Improved the learning experience with a streamlined content layout that makes exploring courses feel fast and intuitive.",
       techStack: ["React.js", "JavaScript", "Tailwind CSS", "Vercel"],
       liveLink: "https://courseapp-kohl.vercel.app",
       sourceCode: "https://github.com/shivanshugupta456/courseapp.git",
+      image: courseAppThumb,
       icon: FaBookOpen,
       gradient: "from-sky-500 to-cyan-500",
     },
     {
       id: 2,
       name: "Live Class",
-      description: "Interactive online learning platform with video streaming, chat, and collaborative whiteboard.",
-      features: ["Real-time video conferencing", "Live chat with moderation", "Collaborative whiteboard"],
-      impact: "Boosted remote learning engagement by delivering smooth real-time interactions and collaboration.",
-      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "WebRTC"],
+      description: "An interactive virtual classroom experience built for live teaching, instant communication, and collaborative online learning.",
+      features: ["Real-time video sessions", "Live chat with moderation", "Collaborative whiteboard tools"],
+      impact: "Made remote classes feel more engaging by combining live interaction, communication, and collaboration in one workflow.",
+      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "Tailwind CSS", "Vercel"],
       liveLink: "https://live-class-fedg.vercel.app",
       sourceCode: "https://github.com/shivanshugupta456/live-class.git",
+      image: liveClassThumb,
       icon: FaChalkboardTeacher,
       gradient: "from-indigo-500 to-violet-600",
     },
     {
       id: 3,
       name: "NoteTaking App",
-      description: "A productivity-focused note management app to create, organize, and maintain notes efficiently.",
-      features: ["Create and manage notes", "Simple and responsive interface", "Fast note access workflow"],
-      impact: "Helped streamline daily note organization with a clean UI and quick interaction flow.",
+      description: "A polished notes workspace designed to make writing, reviewing, and organizing ideas feel clean, fast, and presentation-ready.",
+      features: ["Structured note dashboard", "Create, edit, and delete flows", "Clean responsive workspace UI"],
+      impact: "Made everyday note management feel more professional with a dashboard-first layout and frictionless editing experience.",
       techStack: ["React.js", "JavaScript", "Tailwind CSS", "Vercel"],
       liveLink: "https://notetakingapp-chi.vercel.app/",
       sourceCode: "https://github.com/shivanshugupta456/notetakingapp.git",
+      image: noteTakingThumb,
       icon: FaStickyNote,
       gradient: "from-emerald-500 to-teal-500",
     },
     {
       id: 4,
       name: "Blog App",
-      description: "A modern blogging platform to create, publish, and explore articles with a clean reading experience.",
-      features: ["Create and publish blog posts", "Responsive reading interface", "User-friendly content flow"],
-      impact: "Enabled smooth content sharing and improved reading experience with a clean and scalable UI.",
+      description: "A modern blogging experience crafted for writing, publishing, and reading content through a clean and approachable interface.",
+      features: ["Create and publish articles", "Responsive reading layout", "Smooth content browsing flow"],
+      impact: "Improved content sharing with a polished reading experience that feels lightweight, readable, and easy to explore.",
       techStack: ["React.js", "JavaScript", "Tailwind CSS", "Vercel"],
       liveLink: "https://blog-app-psi-rust-36.vercel.app/",
       sourceCode: "https://github.com/shivanshugupta456/blog-app.git",
+      image: blogThumb,
       icon: FaPenNib,
       gradient: "from-orange-500 to-amber-500",
     },
     {
       id: 5,
       name: "Chat App",
-      description: "A MERN stack chat application built for real-time messaging with a smooth and responsive user experience.",
-      features: ["Real-time chat experience", "Responsive MERN stack interface", "Fast messaging workflow"],
-      impact: "Delivered seamless real-time communication with a modern full-stack architecture and accessible UI.",
+      description: "A sleek real-time chat platform focused on smooth conversations, presence-aware contact lists, and a modern messaging interface.",
+      features: ["Real-time messaging flow", "Active contact sidebar", "Responsive conversation workspace"],
+      impact: "Improved the chat experience with a cleaner communication layout that feels fast, focused, and easy to use across devices.",
       techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io"],
       liveLink: "https://chat-app-psi-fawn-46.vercel.app/",
       sourceCode: "https://github.com/shivanshugupta456/ChatApp.git",
+      image: chatAppThumb,
       icon: FaComments,
       gradient: "from-fuchsia-500 to-pink-600",
     },
@@ -100,35 +110,61 @@ function PortFolio() {
 
             return (
             <div
-              className="border border-slate-700 rounded-[1.6rem] shadow-lg hover:shadow-2xl md:hover:scale-[1.02] transition-all duration-300 overflow-hidden bg-slate-900/90"
+              className="group overflow-hidden rounded-[1.75rem] border border-slate-700/80 bg-slate-900/95 shadow-[0_24px_60px_rgba(2,6,23,0.34)] transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-[0_36px_90px_rgba(8,145,178,0.18)]"
               key={project.id}
             >
-              {/* Project Image */}
-              <div className={`h-48 bg-gradient-to-r ${project.gradient} flex flex-col items-center justify-center gap-4`}>
-                <div className="flex h-20 w-20 items-center justify-center rounded-3xl border border-white/20 bg-white/10 shadow-lg backdrop-blur-sm">
-                  <ProjectIcon className="text-white" size={34} />
+              <div className="relative h-56 overflow-hidden border-b border-slate-700/70 bg-slate-950">
+                <div className="absolute inset-x-0 top-0 z-20 flex items-center justify-between border-b border-white/10 bg-slate-950/85 px-4 py-3 backdrop-blur-md">
+                  <div className="flex items-center gap-2">
+                    <span className="h-2.5 w-2.5 rounded-full bg-rose-400/90" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-amber-300/90" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/90" />
+                  </div>
+                  <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-cyan-200">
+                    Live Preview
+                  </span>
                 </div>
-                <h2 className="text-white text-2xl font-bold text-center px-4">
-                  {project.name}
-                </h2>
+                <img
+                  src={project.image}
+                  alt={`${project.name} preview`}
+                  className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.06]"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.05)_0%,rgba(2,6,23,0.14)_38%,rgba(2,6,23,0.82)_100%)]" />
+                <div className={`absolute inset-0 bg-gradient-to-tr ${project.gradient} opacity-20 mix-blend-screen`} />
+                <div className="absolute inset-x-0 bottom-0 z-20 flex items-end justify-between gap-3 p-4">
+                  <div className="max-w-[75%] rounded-2xl border border-white/10 bg-slate-950/78 px-4 py-3 shadow-lg shadow-slate-950/30 backdrop-blur-xl">
+                    <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.34em] text-slate-300/90">Featured Build</p>
+                    <h2 className="text-lg font-bold text-white md:text-xl">
+                      {project.name}
+                    </h2>
+                  </div>
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-slate-950/78 shadow-lg shadow-slate-950/30 backdrop-blur-xl">
+                    <ProjectIcon className="text-white" size={24} />
+                  </div>
+                </div>
               </div>
 
               {/* Project Details */}
               <div className="p-5 md:p-6">
-                <h3 className="font-bold text-xl mb-3 text-slate-100">{project.name}</h3>
-                <p className="text-slate-300 mb-2 leading-relaxed">{project.description}</p>
+                <div className="mb-3 flex items-start justify-between gap-3">
+                  <h3 className="font-bold text-xl text-slate-100">{project.name}</h3>
+                  <span className="rounded-full border border-slate-600/80 bg-slate-800/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-300">
+                    Case Study
+                  </span>
+                </div>
+                <p className="mb-3 leading-relaxed text-slate-300">{project.description}</p>
 
-                <div className="mb-3">
-                  <h4 className="text-sm font-semibold text-slate-300">Key Features</h4>
-                  <ul className="list-disc list-inside text-slate-300 text-sm">
+                <div className="mb-4 rounded-2xl border border-slate-800 bg-slate-950/50 p-4">
+                  <h4 className="mb-2 text-sm font-semibold text-slate-200">Key Features</h4>
+                  <ul className="list-disc list-inside text-sm text-slate-300">
                     {project.features.map((feature, idx) => (
                       <li key={idx}>{feature}</li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="mb-3">
-                  <h4 className="text-sm font-semibold text-slate-300">Real Impact</h4>
+                <div className="mb-4">
+                  <h4 className="mb-1 text-sm font-semibold text-slate-200">Real Impact</h4>
                   <p className="text-slate-300 text-sm">{project.impact}</p>
                 </div>
 
@@ -160,7 +196,7 @@ function PortFolio() {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl text-center transition-colors duration-300"
+                    className="flex-1 rounded-xl bg-cyan-400 px-4 py-3 text-center font-semibold text-slate-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-300"
                   >
                     Live Demo
                   </a>
@@ -168,7 +204,7 @@ function PortFolio() {
                     href={project.sourceCode}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-4 rounded-xl text-center transition-colors duration-300"
+                    className="flex-1 rounded-xl border border-slate-600 bg-slate-800/90 px-4 py-3 text-center font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-400 hover:bg-slate-700"
                   >
                     Source Code
                   </a>

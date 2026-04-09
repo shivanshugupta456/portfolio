@@ -42,7 +42,7 @@ function Contact() {
         <div className="mb-8 md:mb-10 text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-blue-400">Get In Touch</p>
           <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-100">Contact Me</h1>
-          <p className="mt-3 text-sm sm:text-base text-slate-300 max-w-2xl mx-auto">Have a project, opportunity, or question? Send a message and I&apos;ll reply quickly with a practical solution.</p>
+          <p className="mt-3 max-w-2xl mx-auto text-sm sm:text-base text-slate-300">Have a project, opportunity, or idea in mind? Send a message and I&apos;ll get back with a thoughtful and practical response.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">

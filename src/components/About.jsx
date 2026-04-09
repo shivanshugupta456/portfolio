@@ -13,10 +13,10 @@ function About() {
         <div className="mb-10 md:mb-12">
           <div className="p-5 sm:p-6 md:p-8 bg-slate-900/90 rounded-2xl border border-slate-700 shadow-lg hover:shadow-xl transition-shadow duration-300">
             <p className="text-slate-300 text-base md:text-lg leading-7 md:leading-relaxed">
-              Hey! I&apos;m <span className="font-semibold text-blue-400">Shivanshu Gupta</span>, a Web Developer passionate about building beautiful and functional web applications. I specialize in the <span className="font-semibold text-blue-400">MERN Stack</span> and love solving problems through clean code.
+              I&apos;m <span className="font-semibold text-blue-400">Shivanshu Gupta</span>, a full-stack developer focused on building modern web products that feel clean, fast, and reliable. I work primarily with the <span className="font-semibold text-blue-400">MERN stack</span> and enjoy turning ideas into polished user experiences.
             </p>
             <p className="text-slate-300 text-base md:text-lg leading-7 md:leading-relaxed mt-4">
-              I&apos;m currently preparing in <span className="font-semibold text-cyan-300">Generative AI</span> to build smarter applications alongside web development. I&apos;m a <span className="font-semibold">quick learner</span> and <span className="font-semibold">problem solver</span> who thrives on turning ideas into reality.
+              Alongside web development, I&apos;m also exploring <span className="font-semibold text-cyan-300">Generative AI</span> to build smarter applications and stronger product experiences. I bring a practical mindset, a fast learning curve, and a strong focus on clean implementation.
             </p>
           </div>
         </div>
@@ -79,7 +79,7 @@ function About() {
           <div className="p-5 md:p-6 bg-slate-900/90 rounded-2xl border border-slate-700 border-l-4 border-l-blue-600 shadow-md hover:shadow-lg transition-all duration-300">
             <p className="font-bold text-slate-100 text-lg">Full Stack Web Developer</p>
             <p className="text-slate-400 text-sm">2024 - Present | Freelance & Personal Projects</p>
-            <p className="text-slate-300 mt-2">Building modern web applications with React and Node.js, focusing on performance and user experience.</p>
+            <p className="text-slate-300 mt-2">Designing and shipping full-stack applications with React and Node.js, with attention to usability, responsiveness, and production-ready structure.</p>
           </div>
         </div>
 
@@ -88,17 +88,17 @@ function About() {
           <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-0">
             <FaAward className="text-3xl mr-4 flex-shrink-0 mt-1" />
             <p className="text-base md:text-lg leading-7 md:leading-relaxed">
-              I want to create web solutions that matter. Every project is an opportunity to learn, improve, and deliver value. Let&apos;s collaborate and build something great together!
+              My goal is to build digital products that solve real problems and leave a strong impression through both functionality and design. Every project is a chance to improve, create value, and deliver work that feels genuinely polished.
             </p>
           </div>
         </div>
 
         <h1 className="text-2xl md:text-3xl font-bold text-slate-100 mt-10 mb-6 md:mb-8">Deployment</h1>
         <div className="p-5 md:p-6 bg-slate-900/90 rounded-2xl border border-slate-700 shadow-sm hover:shadow-md transition-shadow duration-300">
-          <p className="text-slate-300 mb-2">This portfolio is deployed on the following platforms for performance, reliability, and easy updates:</p>
+          <p className="text-slate-300 mb-2">This portfolio is hosted with a deployment setup chosen for speed, reliability, and smooth iteration:</p>
           <ul className="list-disc list-inside text-slate-300">
-            <li>Vercel - fast CI/CD deployment for frontend apps</li>
-            <li>Render - production-ready static site hosting with global CDN</li>
+            <li>Vercel - fast frontend deployment with smooth CI/CD workflows</li>
+            <li>Render - dependable hosting support for scalable web delivery</li>
           </ul>
         </div>
       </div>

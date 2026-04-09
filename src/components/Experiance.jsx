@@ -52,7 +52,7 @@ function Experiance() {
       <div className="rounded-[2rem] md:rounded-3xl border border-slate-700/60 bg-slate-900/45 backdrop-blur-md p-5 sm:p-6 md:p-8 shadow-[0_30px_80px_rgba(2,6,23,0.45)]">
         <h1 className="text-3xl font-bold mb-5 text-slate-100">Experience & Skills</h1>
         <p className="text-slate-300 mb-6">
-          I am a full-stack developer with strong hands-on experience building production-ready web applications. I enjoy solving real-world problems using clean architecture, effective dev workflows, and modern technologies.
+          I bring hands-on experience building full-stack applications with a focus on clean architecture, reliable development workflows, and user-centered product execution.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 my-6">
@@ -79,7 +79,7 @@ function Experiance() {
           <div className="bg-slate-900/90 border border-slate-700 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300">
             <h3 className="font-semibold text-lg mb-2 text-blue-600">Project Work</h3>
             <p className="text-slate-300">
-              Built and deployed Chat App, Employee Management System, To-Do App, and Myntra clone projects with responsive UI and APIs.
+              Built and deployed full-stack and frontend projects including Chat App, Employee Management System, To-Do App, and a Myntra clone with responsive interfaces and practical API integration.
             </p>
           </div>
         </div>
