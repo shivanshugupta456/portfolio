@@ -10,7 +10,7 @@ import {
 import { Link } from "react-scroll";
 
 function Footer() {
-  const quickLinks = ["Home", "About", "Portfolio", "Experiance", "Contact"];
+  const quickLinks = ["Home", "About", "Portfolio", "Experience", "Contact"];
 
   return (
     <footer className="relative mt-20 overflow-hidden border-t border-slate-700/70 bg-slate-950 text-slate-100">
@@ -57,7 +57,7 @@ function Footer() {
                     offset={-70}
                     className="cursor-pointer transition-colors duration-300 hover:text-white"
                   >
-                    {item === "Experiance" ? "Experience" : item}
+                    {item}
                   </Link>
                 </li>
               ))}
