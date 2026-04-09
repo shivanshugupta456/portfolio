@@ -1,6 +1,6 @@
 import React from "react";
 
-import shivanshu from "../../public/photo.avif";
+import shivanshu from "../../public/shivanshu.png";
 
 import { ReactTyped } from "react-typed";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import pic from "../../public/photo.avif";
+import pic from "../../public/shivanshu.png";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
