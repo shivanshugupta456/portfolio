@@ -67,7 +67,7 @@ function PortFolio() {
       features: ["Create and publish blog posts", "Responsive reading interface", "User-friendly content flow"],
       impact: "Enabled smooth content sharing and improved reading experience with a clean and scalable UI.",
       techStack: ["React.js", "JavaScript", "Tailwind CSS", "Vercel"],
-      liveLink: "https://blog-app-orpin-nine.vercel.app/",
+      liveLink: "https://blog-app-psi-rust-36.vercel.app/",
       sourceCode: "https://github.com/shivanshugupta456/blog-app.git",
       icon: FaPenNib,
       gradient: "from-orange-500 to-amber-500",
