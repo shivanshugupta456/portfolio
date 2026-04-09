@@ -4,6 +4,7 @@ import {
   FaChalkboardTeacher,
   FaStickyNote,
   FaPenNib,
+  FaComments,
   FaReact,
   FaNodeJs,
 } from "react-icons/fa";
@@ -70,6 +71,18 @@ function PortFolio() {
       sourceCode: "https://github.com/shivanshugupta456/blog-app.git",
       icon: FaPenNib,
       gradient: "from-orange-500 to-amber-500",
+    },
+    {
+      id: 5,
+      name: "Chat App",
+      description: "A MERN stack chat application built for real-time messaging with a smooth and responsive user experience.",
+      features: ["Real-time chat experience", "Responsive MERN stack interface", "Fast messaging workflow"],
+      impact: "Delivered seamless real-time communication with a modern full-stack architecture and accessible UI.",
+      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io"],
+      liveLink: "https://chat-app-psi-fawn-46.vercel.app/",
+      sourceCode: "https://github.com/shivanshugupta456/ChatApp.git",
+      icon: FaComments,
+      gradient: "from-fuchsia-500 to-pink-600",
     },
   ];
 
