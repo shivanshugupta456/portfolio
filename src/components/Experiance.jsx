@@ -79,7 +79,7 @@ function Experiance() {
           <div className="bg-slate-900/90 border border-slate-700 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300">
             <h3 className="font-semibold text-lg mb-2 text-blue-600">Project Work</h3>
             <p className="text-slate-300">
-              Built and deployed Live Class, Employee Management System, To-Do App, and Myntra clone projects with responsive UI and APIs.
+              Built and deployed Chat App, Employee Management System, To-Do App, and Myntra clone projects with responsive UI and APIs.
             </p>
           </div>
         </div>
