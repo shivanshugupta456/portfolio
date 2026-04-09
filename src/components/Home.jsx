@@ -1,9 +1,10 @@
 import React from "react";
 
-import shivanshu from "../../public/shivanshu.png";
+import shivanshu from "../../public/photo.avif";
 
 import { ReactTyped } from "react-typed";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 function Home() {
   return (
@@ -47,6 +48,8 @@ function Home() {
                 <img
                   src={shivanshu}
                   alt="Shivanshu Gupta"
+                  fetchPriority="high"
+                  decoding="async"
                   className="relative rounded-[1.5rem] w-[15rem] h-[18rem] sm:w-[18rem] sm:h-[21rem] md:w-80 md:h-96 object-cover object-top border border-white/60 shadow-[0_14px_30px_rgba(15,23,42,0.22)] group-hover:-translate-y-1 group-hover:scale-[1.02] transition-all duration-300"
                   style={{
                     filter: "contrast(1.08) brightness(1.04) saturate(1.03)",
@@ -70,9 +73,15 @@ function Home() {
               >
                 Download Resume
               </a>
-              <a href="#Portfolio" className="inline-flex min-h-12 items-center justify-center sm:col-span-2 xl:col-span-1 border border-slate-500 text-slate-100 font-semibold px-6 py-3 rounded-xl hover:bg-slate-800 hover:-translate-y-0.5 transition-all duration-300">
+              <Link
+                to="Portfolio"
+                smooth={true}
+                duration={500}
+                offset={-70}
+                className="inline-flex min-h-12 cursor-pointer items-center justify-center sm:col-span-2 xl:col-span-1 border border-slate-500 text-slate-100 font-semibold px-6 py-3 rounded-xl hover:bg-slate-800 hover:-translate-y-0.5 transition-all duration-300"
+              >
                 Explore Work
-              </a>
+              </Link>
             </div>
 
             <div className="mt-5 flex flex-wrap items-center gap-3">

@@ -18,11 +18,7 @@ function Contact() {
     formData.append("fi-text-your-message", data.message);
 
     try {
-      await axios.post("https://forminit.com/f/4dwqo7edhh1", formData, {
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-      });
+      await axios.post("https://forminit.com/f/4dwqo7edhh1", formData);
       toast.success("Your message has been sent");
     } catch (error) {
       console.log(error);
