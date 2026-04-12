@@ -167,7 +167,7 @@ function PortFolio() {
                           : "scale-[0.98] blur-[0.3px]"
                       }`}
                     >
-                      <div className="relative h-56 overflow-hidden border-b border-slate-700/70 bg-slate-950">
+                      <div className="relative h-48 sm:h-52 overflow-hidden border-b border-slate-700/70 bg-slate-950">
                         <div className="absolute inset-x-0 top-0 z-20 flex items-center justify-between border-b border-white/10 bg-slate-950/85 px-3 py-3 sm:px-4 backdrop-blur-md">
                           <div className="flex items-center gap-2">
                             <span className="h-2.5 w-2.5 rounded-full bg-rose-400/90" />
@@ -183,10 +183,10 @@ function PortFolio() {
                           alt={`${project.name} preview`}
                           loading="lazy"
                           decoding="async"
-                          className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.06]"
+                          className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.06] brightness-105"
                         />
-                        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.05)_0%,rgba(2,6,23,0.14)_38%,rgba(2,6,23,0.82)_100%)]" />
-                        <div className={`absolute inset-0 bg-gradient-to-tr ${project.gradient} opacity-20 mix-blend-screen`} />
+                        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.02)_0%,rgba(2,6,23,0.12)_38%,rgba(2,6,23,0.6)_100%)]" />
+                        <div className={`absolute inset-0 bg-gradient-to-tr ${project.gradient} opacity-16 mix-blend-screen`} />
                         <div className="absolute inset-x-0 bottom-0 z-20 flex items-end justify-between gap-3 p-3 sm:p-4">
                           <div className="max-w-[78%] rounded-2xl border border-white/10 bg-slate-950/78 px-4 py-3 shadow-lg shadow-slate-950/30 backdrop-blur-xl">
                             <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.34em] text-slate-300/90">Featured Build</p>
@@ -207,18 +207,18 @@ function PortFolio() {
                             Case Study
                           </span>
                         </div>
-                        <p className="mb-3 leading-relaxed text-slate-300">{project.description}</p>
+                        <p className="mb-3 leading-relaxed text-slate-300 line-clamp-3">{project.description}</p>
 
                         {isActive ? (
                           <>
                             <div className="mb-4 grid gap-3">
                               <div className="rounded-2xl border border-slate-800 bg-slate-950/50 p-4">
                                 <h4 className="mb-1 text-sm font-semibold text-slate-200">Problem</h4>
-                                <p className="text-sm leading-relaxed text-slate-300">{project.challenge}</p>
+                                <p className="text-sm leading-relaxed text-slate-300 line-clamp-2">{project.challenge}</p>
                               </div>
                               <div className="rounded-2xl border border-slate-800 bg-slate-950/50 p-4">
                                 <h4 className="mb-1 text-sm font-semibold text-slate-200">Solution</h4>
-                                <p className="text-sm leading-relaxed text-slate-300">{project.solution}</p>
+                                <p className="text-sm leading-relaxed text-slate-300 line-clamp-2">{project.solution}</p>
                               </div>
                             </div>
 
