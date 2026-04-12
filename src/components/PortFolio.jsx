@@ -137,23 +137,24 @@ function PortFolio() {
           <div className="pointer-events-none absolute -right-12 -bottom-10 h-36 w-36 rounded-full bg-indigo-500/15 blur-3xl" />
 
           <div className="relative overflow-hidden">
-            <div className="relative h-[640px] sm:h-[600px] md:h-[640px] lg:h-[620px]">
+            <div className="relative h-[520px] sm:h-[520px] md:h-[540px] lg:h-[560px] [perspective:1200px]">
               {projects.map((project, index) => {
                 const ProjectIcon = project.icon;
                 const offset = index - wrappedIndex;
                 const isActive = index === wrappedIndex;
                 const clampedOffset = Math.max(-2, Math.min(2, offset));
-                const translateX = clampedOffset * 72;
-                const scale = isActive ? 1 : 0.88;
+                const translateX = clampedOffset * 85;
+                const scale = isActive ? 1 : 0.86;
                 const opacity = Math.abs(offset) > 2 ? 0 : isActive ? 1 : 0.55;
+                const rotateY = clampedOffset * -12;
                 const zIndex = isActive ? 30 : 10 - Math.abs(offset);
 
                 return (
                   <div
                     key={project.id}
-                    className="absolute left-1/2 top-1/2 w-[88%] sm:w-[72%] md:w-[56%] lg:w-[46%] transition-all duration-500"
+                    className="absolute left-1/2 top-1/2 w-[82%] sm:w-[64%] md:w-[46%] lg:w-[34%] transition-all duration-500"
                     style={{
-                      transform: `translate(-50%, -50%) translateX(${translateX}%) scale(${scale})`,
+                      transform: `translate(-50%, -50%) translateX(${translateX}%) scale(${scale}) rotateY(${rotateY}deg)`,
                       opacity,
                       zIndex,
                       pointerEvents: isActive ? "auto" : "none",
@@ -163,7 +164,7 @@ function PortFolio() {
                       className={`group overflow-hidden rounded-[1.75rem] border border-slate-700/80 bg-slate-900/95 shadow-[0_24px_60px_rgba(2,6,23,0.34)] transition-all duration-500 ${
                         isActive
                           ? "hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-[0_36px_90px_rgba(8,145,178,0.18)]"
-                          : "scale-[0.98]"
+                          : "scale-[0.98] blur-[0.3px]"
                       }`}
                     >
                       <div className="relative h-56 overflow-hidden border-b border-slate-700/70 bg-slate-950">
@@ -208,30 +209,41 @@ function PortFolio() {
                         </div>
                         <p className="mb-3 leading-relaxed text-slate-300">{project.description}</p>
 
-                        <div className="mb-4 grid gap-3">
-                          <div className="rounded-2xl border border-slate-800 bg-slate-950/50 p-4">
-                            <h4 className="mb-1 text-sm font-semibold text-slate-200">Problem</h4>
-                            <p className="text-sm leading-relaxed text-slate-300">{project.challenge}</p>
-                          </div>
-                          <div className="rounded-2xl border border-slate-800 bg-slate-950/50 p-4">
-                            <h4 className="mb-1 text-sm font-semibold text-slate-200">Solution</h4>
-                            <p className="text-sm leading-relaxed text-slate-300">{project.solution}</p>
-                          </div>
-                        </div>
+                        {isActive ? (
+                          <>
+                            <div className="mb-4 grid gap-3">
+                              <div className="rounded-2xl border border-slate-800 bg-slate-950/50 p-4">
+                                <h4 className="mb-1 text-sm font-semibold text-slate-200">Problem</h4>
+                                <p className="text-sm leading-relaxed text-slate-300">{project.challenge}</p>
+                              </div>
+                              <div className="rounded-2xl border border-slate-800 bg-slate-950/50 p-4">
+                                <h4 className="mb-1 text-sm font-semibold text-slate-200">Solution</h4>
+                                <p className="text-sm leading-relaxed text-slate-300">{project.solution}</p>
+                              </div>
+                            </div>
 
-                        <div className="mb-4 rounded-2xl border border-slate-800 bg-slate-950/50 p-4">
-                          <h4 className="mb-2 text-sm font-semibold text-slate-200">Key Features</h4>
-                          <ul className="list-disc list-inside text-sm text-slate-300">
-                            {project.features.map((feature, idx) => (
-                              <li key={idx}>{feature}</li>
-                            ))}
-                          </ul>
-                        </div>
+                            <div className="mb-4 rounded-2xl border border-slate-800 bg-slate-950/50 p-4">
+                              <h4 className="mb-2 text-sm font-semibold text-slate-200">Key Features</h4>
+                              <ul className="list-disc list-inside text-sm text-slate-300">
+                                {project.features.map((feature, idx) => (
+                                  <li key={idx}>{feature}</li>
+                                ))}
+                              </ul>
+                            </div>
 
-                        <div className="mb-4">
-                          <h4 className="mb-1 text-sm font-semibold text-slate-200">Outcome</h4>
-                          <p className="text-slate-300 text-sm">{project.impact}</p>
-                        </div>
+                            <div className="mb-4">
+                              <h4 className="mb-1 text-sm font-semibold text-slate-200">Outcome</h4>
+                              <p className="text-slate-300 text-sm">{project.impact}</p>
+                            </div>
+                          </>
+                        ) : (
+                          <div className="mb-4 rounded-2xl border border-slate-800 bg-slate-950/50 p-4">
+                            <h4 className="mb-2 text-sm font-semibold text-slate-200">Snapshot</h4>
+                            <p className="text-sm leading-relaxed text-slate-300 line-clamp-3">
+                              {project.challenge}
+                            </p>
+                          </div>
+                        )}
 
                         <div className="mb-4">
                           <h4 className="font-semibold text-slate-200 mb-2">Tech Stack:</h4>
@@ -277,36 +289,35 @@ function PortFolio() {
             </div>
           </div>
 
-          <div className="mt-6 flex items-center justify-center gap-4">
-            <button
-              type="button"
-              onClick={() => goTo(wrappedIndex - 1)}
-              className="h-11 w-11 rounded-full border border-slate-600/70 bg-slate-900/80 text-slate-200 transition-all duration-300 hover:border-cyan-400/60 hover:text-white"
-              aria-label="Previous project"
-            >
-              &#8249;
-            </button>
-            <div className="flex items-center gap-2">
-              {projects.map((_, index) => (
-                <button
-                  key={index}
-                  type="button"
-                  onClick={() => goTo(index)}
-                  className={`h-2.5 rounded-full transition-all duration-300 ${
-                    index === wrappedIndex ? "w-6 bg-cyan-300" : "w-2.5 bg-slate-600"
-                  }`}
-                  aria-label={`Go to project ${index + 1}`}
-                />
-              ))}
-            </div>
-            <button
-              type="button"
-              onClick={() => goTo(wrappedIndex + 1)}
-              className="h-11 w-11 rounded-full border border-slate-600/70 bg-slate-900/80 text-slate-200 transition-all duration-300 hover:border-cyan-400/60 hover:text-white"
-              aria-label="Next project"
-            >
-              &#8250;
-            </button>
+          <button
+            type="button"
+            onClick={() => goTo(wrappedIndex - 1)}
+            className="absolute left-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full border border-slate-600/70 bg-slate-900/80 text-slate-200 transition-all duration-300 hover:border-cyan-400/60 hover:text-white"
+            aria-label="Previous project"
+          >
+            &#8249;
+          </button>
+          <button
+            type="button"
+            onClick={() => goTo(wrappedIndex + 1)}
+            className="absolute right-0 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full border border-slate-600/70 bg-slate-900/80 text-slate-200 transition-all duration-300 hover:border-cyan-400/60 hover:text-white"
+            aria-label="Next project"
+          >
+            &#8250;
+          </button>
+
+          <div className="mt-6 flex items-center justify-center gap-2">
+            {projects.map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                onClick={() => goTo(index)}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  index === wrappedIndex ? "w-6 bg-cyan-300" : "w-2.5 bg-slate-600"
+                }`}
+                aria-label={`Go to project ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </div>
