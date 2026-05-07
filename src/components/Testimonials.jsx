@@ -94,11 +94,7 @@ function Testimonials() {
         </div>
 
         {/* Stats Row */}
-        <div className="mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="p-4 md:p-6 rounded-xl border border-slate-700 bg-slate-950/40 text-center hover:bg-slate-950/60 transition-all duration-300">
-            <p className="text-2xl md:text-3xl font-bold text-cyan-400">12K+</p>
-            <p className="text-slate-400 text-sm mt-1">Monthly Active Users</p>
-          </div>
+        <div className="mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="p-4 md:p-6 rounded-xl border border-slate-700 bg-slate-950/40 text-center hover:bg-slate-950/60 transition-all duration-300">
             <p className="text-2xl md:text-3xl font-bold text-cyan-400">90+</p>
             <p className="text-slate-400 text-sm mt-1">Avg Lighthouse Score</p>
