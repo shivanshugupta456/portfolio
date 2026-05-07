@@ -4,8 +4,9 @@ import Home from "./components/Home";
 import About from "./components/About";
 import PortFolio from "./components/PortFolio";
 import Experience from "./components/Experience";
-import Footer from "./components/Footer";
+import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <About />
         <PortFolio />
         <Experience />
+        <Testimonials />
         <Contact />
         <Footer />
       </div>

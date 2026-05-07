@@ -26,6 +26,10 @@ function Navbar() {
     },
     {
       id: 5,
+      text: "Testimonials",
+    },
+    {
+      id: 6,
       text: "Contact",
     },
   ];

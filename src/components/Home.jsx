@@ -47,9 +47,10 @@ function Home() {
                 <div className="absolute inset-2 rounded-[1.4rem] border border-slate-300/80"></div>
                 <img
                   src={shivanshu}
-                  alt="Shivanshu Gupta"
+                  alt="Shivanshu Gupta - Full Stack Developer from Firozabad, India"
                   fetchPriority="high"
                   decoding="async"
+                  loading="eager"
                   className="relative rounded-[1.5rem] w-[15rem] h-[18rem] sm:w-[18rem] sm:h-[21rem] md:w-80 md:h-96 object-cover object-top border border-white/60 shadow-[0_14px_30px_rgba(15,23,42,0.22)] group-hover:-translate-y-1 group-hover:scale-[1.02] transition-all duration-300"
                   style={{
                     filter: "contrast(1.08) brightness(1.04) saturate(1.03)",
@@ -61,7 +62,7 @@ function Home() {
             </div>
           </div>
 
-            <div className="home-fade-up home-delay-3 mt-6 md:mt-8 z-10">
+          <div className="home-fade-up home-delay-3 mt-6 md:mt-8 z-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:flex gap-3">
               <a href="mailto:rajkishoregupta716@gmail.com" className="inline-flex min-h-12 items-center justify-center bg-blue-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-blue-500/20 hover:bg-blue-400 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300">
                 Contact Me
@@ -113,18 +114,18 @@ function Home() {
             </div>
           </div>
 
-            <div className="mt-8 md:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 z-10">
-              <div className="home-fade-up home-delay-3 h-full p-5 md:p-6 bg-white/95 border border-slate-200 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
-                <p className="text-xs uppercase tracking-wide text-sky-600 font-bold">Featured Work</p>
-                <h3 className="text-xl font-semibold text-slate-900">5 Polished Projects</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">Real-world builds across learning, communication, content, and productivity experiences.</p>
-              </div>
-              <div className="home-fade-up home-delay-4 h-full p-5 md:p-6 bg-white/95 border border-slate-200 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
-                <p className="text-xs uppercase tracking-wide text-sky-600 font-bold">Focus Areas</p>
-                <h3 className="text-xl font-semibold text-slate-900">MERN + Product UI</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">From clean frontend systems to robust backend flows, I build applications that balance usability and performance.
-                </p>
-              </div>
+          <div className="mt-8 md:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 z-10">
+            <div className="home-fade-up home-delay-3 h-full p-5 md:p-6 bg-white/95 border border-slate-200 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
+              <p className="text-xs uppercase tracking-wide text-sky-600 font-bold">Featured Work</p>
+              <h3 className="text-xl font-semibold text-slate-900">5 Polished Projects</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Real-world builds across learning, communication, content, and productivity experiences.</p>
+            </div>
+            <div className="home-fade-up home-delay-4 h-full p-5 md:p-6 bg-white/95 border border-slate-200 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
+              <p className="text-xs uppercase tracking-wide text-sky-600 font-bold">Focus Areas</p>
+              <h3 className="text-xl font-semibold text-slate-900">MERN + Product UI</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">From clean frontend systems to robust backend flows, I build applications that balance usability and performance.
+              </p>
+            </div>
           </div>
         </div>
       </div>
