@@ -12,6 +12,7 @@ import {
   FaComments,
   FaReact,
   FaNodeJs,
+  FaBrain,
 } from "react-icons/fa";
 import { SiJavascript, SiTailwindcss, SiVercel, SiExpress, SiMongodb, SiSocketdotio, SiWebrtc } from "react-icons/si";
 
@@ -103,6 +104,21 @@ function PortFolio() {
       image: chatAppThumb,
       icon: FaComments,
       gradient: "from-fuchsia-500 to-pink-600",
+    },
+    {
+      id: 6,
+      name: "Multi-Agent Research System",
+      description: "An AI-powered research assistant built with Streamlit to help users explore ideas, gather context, and generate structured responses through an interactive interface.",
+      challenge: "Research workflows often feel fragmented when users need to move between prompts, context, and output formatting.",
+      solution: "Built a streamlined GenAI application that combines prompt-driven interactions with a simple, accessible UI for faster research assistance.",
+      features: ["Streamlit-based interactive UI", "LLM-powered research assistance", "Prompt engineering for structured outputs"],
+      impact: "Made AI-assisted research more approachable by turning complex workflows into a simple, practical experience.",
+      techStack: ["Streamlit", "LLM APIs", "Python", "Prompt Engineering"],
+      liveLink: "https://multi-agent-research-systemapp.streamlit.app/",
+      sourceCode: "https://github.com/shivanshugupta456/Multi_agent_research_system",
+      image: "https://image.thum.io/get/https://multi-agent-research-systemapp.streamlit.app/",
+      icon: FaBrain,
+      gradient: "from-violet-500 to-cyan-500",
     },
   ];
 
