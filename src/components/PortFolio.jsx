@@ -1,15 +1,11 @@
 import React from "react";
 import courseAppThumb from "../../public/courseapp-thumb.png";
-import liveClassThumb from "../../public/live-class-thumb.png";
 import noteTakingThumb from "../../public/notetaking-thumb.png";
 import blogThumb from "../../public/blog-thumb.png";
-import chatAppThumb from "../../public/chatapp-thumb.png";
 import {
   FaBookOpen,
-  FaChalkboardTeacher,
   FaStickyNote,
   FaPenNib,
-  FaComments,
   FaReact,
   FaNodeJs,
   FaBrain,
@@ -46,21 +42,6 @@ function PortFolio() {
       gradient: "from-sky-500 to-cyan-500",
     },
     {
-      id: 2,
-      name: "Live Class",
-      description: "An interactive virtual classroom experience built for live teaching, instant communication, and collaborative online learning.",
-      challenge: "Remote classes often feel disconnected when teaching, messaging, and collaboration happen in separate tools.",
-      solution: "Combined live sessions, chat, and whiteboard collaboration into one unified classroom experience.",
-      features: ["Real-time video sessions", "Live chat with moderation", "Collaborative whiteboard tools"],
-      impact: "Made remote classes feel more engaging by combining live interaction, communication, and collaboration in one workflow.",
-      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "Tailwind CSS", "Vercel"],
-      liveLink: "https://live-class-fedg.vercel.app",
-      sourceCode: "https://github.com/shivanshugupta456/live-class.git",
-      image: liveClassThumb,
-      icon: FaChalkboardTeacher,
-      gradient: "from-indigo-500 to-violet-600",
-    },
-    {
       id: 3,
       name: "NoteTaking App",
       description: "A polished notes workspace designed to make writing, reviewing, and organizing ideas feel clean, fast, and presentation-ready.",
@@ -89,21 +70,6 @@ function PortFolio() {
       image: blogThumb,
       icon: FaPenNib,
       gradient: "from-orange-500 to-amber-500",
-    },
-    {
-      id: 5,
-      name: "Chat App",
-      description: "A sleek real-time chat platform focused on smooth conversations, presence-aware contact lists, and a modern messaging interface.",
-      challenge: "Messaging products feel weak when conversations, presence, and contact management do not stay visually connected.",
-      solution: "Built a real-time chat workspace with an active contact sidebar and a focused conversation-first layout.",
-      features: ["Real-time messaging flow", "Active contact sidebar", "Responsive conversation workspace"],
-      impact: "Improved the chat experience with a cleaner communication layout that feels fast, focused, and easy to use across devices.",
-      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io"],
-      liveLink: "https://chat-app-psi-fawn-46.vercel.app/",
-      sourceCode: "https://github.com/shivanshugupta456/ChatApp.git",
-      image: chatAppThumb,
-      icon: FaComments,
-      gradient: "from-fuchsia-500 to-pink-600",
     },
     {
       id: 6,
