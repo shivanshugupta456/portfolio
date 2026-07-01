@@ -104,9 +104,9 @@ function Experience() {
                 <FaCheckCircle className="text-cyan-400 mt-1 flex-shrink-0 text-lg md:text-xl" />
                 <div className="min-w-0">
                   <p className="font-bold text-slate-100 text-base md:text-lg">Full Stack Developer</p>
-                  <p className="text-slate-400 text-xs md:text-sm">Jul 2024 - Present | Personal Projects & Freelance</p>
+                  <p className="text-slate-400 text-xs md:text-sm">2024 - Present | Personal Projects</p>
                   <p className="text-slate-300 text-sm md:text-base mt-2 leading-relaxed">
-                    Designed and deployed 5+ full-stack applications handling 12,000+ monthly active users. Architected real-time communication systems using Socket.io, optimized performance to 90+ Lighthouse scores, and implemented responsive interfaces across all device types.
+                    Built and improved full-stack web applications using React.js, Node.js, Express.js, and MongoDB, with attention to responsive design, practical functionality, and clean user experience.
                   </p>
                 </div>
               </div>
@@ -153,10 +153,7 @@ function Experience() {
             </li>
             <li className="flex items-start gap-3 text-slate-300 text-sm md:text-base">
               <span className="text-cyan-400 font-bold mt-0.5">✓</span>
-            </li>
-            <li className="flex items-start gap-3 text-slate-300 text-sm md:text-base">
-              <span className="text-cyan-400 font-bold mt-0.5">✓</span>
-              <span>90+ average Lighthouse performance score</span>
+              <span>Built several full-stack projects across frontend, backend, and UI implementation</span>
             </li>
             <li className="flex items-start gap-3 text-slate-300 text-sm md:text-base">
               <span className="text-cyan-400 font-bold mt-0.5">✓</span>
