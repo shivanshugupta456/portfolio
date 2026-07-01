@@ -92,7 +92,7 @@ function Navbar() {
                 </a>
               </div>
               <a
-                href="/Shivanshu_Gupta_Internship_Resume-1.pdf"
+                href="/Shivanshu_Gupta_Resume.pdf"
                 download="Shivanshu-Gupta-Resume.pdf"
                 className="inline-flex items-center justify-center rounded-lg bg-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-300"
               >
@@ -139,7 +139,7 @@ function Navbar() {
               ))}
               <li>
                 <a
-                  href="/Shivanshu_Gupta_Internship_Resume-1.pdf"
+                  href="/Shivanshu_Gupta_Resume.pdf"
                   download="Shivanshu-Gupta-Resume.pdf"
                   onClick={() => setMenu(false)}
                   className="block rounded-xl bg-cyan-400 px-4 py-3 text-center text-sm font-semibold text-slate-950 transition-all duration-300 hover:bg-cyan-300"

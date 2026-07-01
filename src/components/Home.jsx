@@ -68,7 +68,7 @@ function Home() {
                 Contact Me
               </a>
               <a
-                href="/Shivanshu_Gupta_Internship_Resume-1.pdf"
+                href="/Shivanshu_Gupta_Resume.pdf"
                 download="Shivanshu-Gupta-Resume.pdf"
                 className="inline-flex min-h-12 items-center justify-center border border-cyan-400/50 bg-cyan-400/10 text-cyan-200 font-semibold px-6 py-3 rounded-xl shadow-lg shadow-cyan-500/10 hover:bg-cyan-400/20 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300"
               >

@@ -36,7 +36,7 @@ function Footer() {
                 <FaArrowRight size={14} />
               </a>
               <a
-                href="/Shivanshu_Gupta_Internship_Resume-1.pdf"
+                href="/Shivanshu_Gupta_Resume.pdf"
                 download="Shivanshu-Gupta-Resume.pdf"
                 className="inline-flex items-center rounded-xl border border-cyan-400/40 bg-cyan-400/10 px-5 py-3 text-sm font-semibold text-cyan-200 transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-400/20"
               >
