@@ -157,7 +157,7 @@ function Experience() {
             </li>
             <li className="flex items-start gap-3 text-slate-300 text-sm md:text-base">
               <span className="text-cyan-400 font-bold mt-0.5">✓</span>
-              <span>100+ DSA problems on leetcode</span>
+              <span>150+ DSA problems on leetcode</span>
             </li>
           </ul>
         </div>
